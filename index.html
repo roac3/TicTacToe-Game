@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="app.js"></script>
+
+
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        
+        <div class="game_header">
+            <div class="logo">X<span>O</span></div>
+            <div class="player_turn">Turn O</div>
+            <div class="restart"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+        </div>
+
+        <div class="game_container">
+            <div class="gamecell gamecell1"></div>
+            <div class="gamecell gamecell2"></div>
+            <div class="gamecell gamecell3"></div>
+            <div class="gamecell gamecell4"></div>
+            <div class="gamecell gamecell5"></div>
+            <div class="gamecell gamecell6"></div>
+            <div class="gamecell gamecell7"></div>
+            <div class="gamecell gamecell8"></div>
+            <div class="gamecell gamecell9"></div>
+        </div>
+
+        <div class="points">
+
+            <div class="point_cell x_points">
+                <p>X Points<br><span class="x_p">0</span></p>
+            </div>
+            <div class="point_cell draw_points">
+                <p>Draws<br><span class="draw_p">0</span></p>
+            </div>
+            <div class="point_cell o_points">
+                <p>O Points<br><span class="o_p">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="winner_popup">
+        <div class="card">
+            <h2 class="winner_title">Winner Title</h2>
+
+            <div class="winner_btns">
+                <div class="w_b continue_btn">
+                    Continue
+                </div>
+
+                <div class="w_b reset_btn">
+                    Reset
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

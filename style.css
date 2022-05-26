@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(7, 37, 44);
+}
+
+.container{
+    width: fit-content;
+    text-align: center;
+}
+
+.container h2{
+    margin-bottom: 20px;
+    color: white;
+}
+
+.game_header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: white;
+    justify-content: space-between;
+    flex-basis: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.logo{
+    font-size: 40px;
+    letter-spacing: 2px;
+    color:rgb(233, 144, 27);
+}
+
+.logo span{
+    color: rgb(16, 80, 175);
+}
+
+.restart{
+    padding: 15px;
+    background-color: rgb(168, 214, 226);
+    color: rgb(18, 88, 105);
+    font-size: 20px;
+    border-radius: 10px;
+    border-bottom: solid rgb(4, 90, 90) 5px;
+}
+
+.player_turn{
+    padding: 10px 20px;
+    font-size: 25px;
+    background-color: rgb(27, 130, 156);
+    border-bottom: solid rgb(4, 90, 90) 5px;
+    border-radius: 10px;
+}
+
+.restart:active{
+    border-bottom: none;
+}
+
+.gamecell{
+    background-color: rgb(27, 130, 156);
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: 800;
+    border-radius: 20px;
+    border-bottom: solid rgb(4, 90, 90) 10px;
+}
+
+.OStyle{
+    color: rgb(16, 80, 175);
+    /* -webkit-text-stroke: 4px black; */
+}
+
+.XStyle{
+    color: rgb(233, 144, 27);
+    /* -webkit-text-stroke: 4px black; */
+}
+
+.game_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    width: 100%;
+}
+
+.points{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.point_cell{
+    margin: 20px;
+    padding: 10px;
+    color: rgb(4, 90, 90) 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.x_points{
+    background-color: rgb(233, 144, 27);
+    border-bottom: solid rgb(168, 105, 21) 7px;
+
+}
+
+.draw_points{
+    background-color: rgb(168, 214, 226);
+    border-bottom: solid rgb(104, 132, 139) 7px;
+}
+
+.o_points{
+    background-color: rgb(16, 80, 175);
+    border-bottom: solid rgb(9, 41, 88) 7px;
+}
+
+.winner_popup{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.5);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: -100%;
+    transition: all 0.8s;
+}
+
+.active_popup{
+    left: 0;
+}
+
+.winner_popup .card{
+    width: 100%;
+    height: 30%;
+    background-color: rgb(27, 130, 156);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.card h2{
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+}
+
+.card .winner_btns{
+    text-align: center;
+    min-width: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.w_b{
+    padding: 10px;
+    background-color: rgb(168, 214, 226);
+    border-bottom: solid rgb(104, 132, 139) 7px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    
+    .gamecell{
+        width: 70px;
+        height: 70px;
+        border-radius: 10%;
+        font-size: 50px;
+    }
+
+    .card h2{
+        font-size: 40px;
+    }
+
+    .w_b{
+        font-size: 20px;
+    }
+
+    .winner_btns{
+        width: 80%;
+    }
+
+    .point_cell{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 415px){
+    .x_points{
+        order: 1;
+    }
+
+    .o_points{
+        order: 2;
+    }
+
+    .draw_points{
+        order:3;
+    }
+}
